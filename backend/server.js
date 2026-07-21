@@ -5,7 +5,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const connectDB = require("./config/db");
 const { errorHandler, notFound } = require("./middleware/errorHandler");
-
+console.log("MONGO_URI =", process.env.MONGO_URI);
 connectDB();
 
 const app = express();
@@ -30,9 +30,25 @@ app.use("/api/vitals", require("./routes/vitalRoutes"));
 app.use("/api/notifications", require("./routes/notificationRoutes"));
 app.use("/api/dashboard", require("./routes/dashboardRoutes"));
 app.use("/api/reports", require("./routes/reportRoutes"));
-
 app.get("/api/health", (req, res) => {
-  res.json({ success: true, message: "HealthCare Pro API is running" });
+  res.status(200).json({
+    success: true,
+    message: "HealthCare Pro API is running",
+    uptime: process.uptime(),
+    environment: process.env.NODE_ENV,
+    timestamp: new Date().toISOString(),
+  });
+});
+app.get("/api/info", (req, res) => {
+  res.status(200).json({
+    success: true,
+    project: "ZenPulse Healthcare Management System",
+    version: "1.0.0",
+    backend: "Node.js + Express",
+    database: "MongoDB",
+    author: "Group 31",
+    timestamp: new Date().toISOString(),
+  });
 });
 
 app.use(notFound);
