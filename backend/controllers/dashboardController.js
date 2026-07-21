@@ -150,3 +150,12 @@ exports.getPatientStats = asyncHandler(async (req, res) => {
 
   res.json({ success: true, stats: { upcomingAppointments, totalAppointments, totalPrescriptions } });
 });
+// @desc Health Check API
+// @route GET /api/dashboard/health
+exports.healthCheck = async (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "ZenPulse Backend is running successfully",
+    timestamp: new Date(),
+  });
+};
