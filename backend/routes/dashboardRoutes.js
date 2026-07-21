@@ -16,3 +16,10 @@ router.get("/staff", protect, authorize("staff"), getStaffStats);
 router.get("/patient", protect, authorize("patient"), getPatientStats);
 
 module.exports = router;
+const {
+  getDashboard,
+  healthCheck,
+} = require("../controllers/dashboardController");
+
+
+router.get("/health", healthCheck);
