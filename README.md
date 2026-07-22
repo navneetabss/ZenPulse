@@ -4,8 +4,8 @@ Healthcare Management System (Hospital ERP) built using MERN Stack
 
 🌟 ZenPulse Hospital Management System
 
-  A Modern Hospital Management System built with HTML, CSS, and
-  JavaScript
+  A Modern Hospital Management System built with HTML, CSS,
+  JavaScript, MongoDB, Express.js, React.js and Node.js (MERN)
 
 ------------------------------------------------------------------------
 
@@ -41,6 +41,7 @@ billing, pharmacy, reports, and administration.
 -   🅱️ Bootstrap 5
 -   📈 Chart.js
 -   ⭐ Font Awesome
+-   ⭐ MongoDB
 
 ------------------------------------------------------------------------
 
@@ -905,3 +906,5 @@ MCA Final Year Project
     user-friendly hospital management interface.
 -   👨‍⚕️ ZenPulse Feature Note 401: Professional, responsive,
     user-friendly hospital management interface.
+
+  Updated by Pushpa Kumari
