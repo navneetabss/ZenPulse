@@ -1,5 +1,6 @@
 {
   "name": "healthcare-pro-backend",
+  "description": "ZenPulse Hospital ERP Backend",
   "version": "1.0.0",
   "description": "HealthCare Pro - Smart Health Management System (Backend API)",
   "main": "server.js",
